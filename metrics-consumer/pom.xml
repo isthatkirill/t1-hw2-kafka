@@ -10,17 +10,25 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>metrics-producer</artifactId>
-    <name>metrics-producer</name>
-    <description>Producer service</description>
+    <artifactId>metrics-consumer</artifactId>
+    <name>metrics-consumer</name>
+    <description>Consumer service</description>
 
     <properties>
+        <mapstruct.version>1.5.3.Final</mapstruct.version>
     </properties>
 
     <dependencies>
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-validation</artifactId>
+            <groupId>org.mapstruct</groupId>
+            <artifactId>mapstruct</artifactId>
+            <version>${mapstruct.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.mapstruct</groupId>
+            <artifactId>mapstruct-processor</artifactId>
+            <version>${mapstruct.version}</version>
         </dependency>
     </dependencies>
 
