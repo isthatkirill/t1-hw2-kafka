@@ -1,0 +1,55 @@
+version: '3'
+
+networks:
+  app:
+    driver: bridge
+
+volumes:
+  kafka:
+    driver: local
+  zookeeper:
+    driver: local
+  postgresql:
+    driver: local
+
+services:
+  producer:
+    build:
+      context: ./
+      dockerfile: metrics-producer/Dockerfile
+    container_name: metrics-producer
+    networks:
+      - app
+    depends_on:
+      - kafka
+    env_file:
+      - .env
+    ports:
+      - '8081:8081'
+
+  zookeeper:
+    image: confluentinc/cp-zookeeper:latest
+    container_name: zookeeper
+    networks:
+      - app
+    env_file:
+      - .env
+    ports:
+      - '2181:2181'
+    volumes:
+      - zookeeper:/var/lib/zookeeper/data
+
+  kafka:
+    image: confluentinc/cp-kafka:latest
+    container_name: kafka
+    networks:
+      - app
+    env_file:
+      - .env
+    depends_on:
+      - zookeeper
+    ports:
+      - '9092:9092'
+    volumes:
+      - kafka:/var/lib/kafka/data
+
