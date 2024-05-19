@@ -1,13 +1,13 @@
-package isthatkirill.hwtwokafka;
+package isthatkirill.hwtwokafka.producer;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class HwTwoKafkaApplication {
+public class ProducerServiceApp {
 
 	public static void main(String[] args) {
-		SpringApplication.run(HwTwoKafkaApplication.class, args);
+		SpringApplication.run(ProducerServiceApp.class, args);
 	}
 
 }
