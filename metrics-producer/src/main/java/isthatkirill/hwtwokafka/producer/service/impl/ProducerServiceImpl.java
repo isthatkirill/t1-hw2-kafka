@@ -1,5 +1,6 @@
-package isthatkirill.hwtwokafka.producer.service;
+package isthatkirill.hwtwokafka.producer.service.impl;
 
+import isthatkirill.hwtwokafka.producer.service.ProducerService;
 import isthatkirill.hwtwokafka.producer.web.dto.MetricDto;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

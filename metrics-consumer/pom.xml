@@ -15,6 +15,7 @@
     <description>Consumer service</description>
 
     <properties>
+        <gson.version>2.10.1</gson.version>
         <mapstruct.version>1.5.3.Final</mapstruct.version>
     </properties>
 
@@ -29,6 +30,12 @@
             <groupId>org.mapstruct</groupId>
             <artifactId>mapstruct-processor</artifactId>
             <version>${mapstruct.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>${gson.version}</version>
         </dependency>
     </dependencies>
 

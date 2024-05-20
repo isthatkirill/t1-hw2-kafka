@@ -27,6 +27,20 @@ services:
     ports:
       - '8081:8081'
 
+  consumer:
+    build:
+      context: ./
+      dockerfile: metrics-consumer/Dockerfile
+    container_name: metrics-consumer
+    networks:
+      - app
+    depends_on:
+      - producer
+    env_file:
+      - .env
+    ports:
+      - '8082:8082'
+
   zookeeper:
     image: confluentinc/cp-zookeeper:latest
     container_name: zookeeper
