@@ -31,7 +31,7 @@ public class MetricController {
 
     @GetMapping("/{id}")
     public ResponseEntity<MetricDto> getById(@PathVariable Long id) {
-        return ResponseEntity.of(metricService.getById(id));
+        return ResponseEntity.ok(metricService.getById(id));
     }
 
 }
