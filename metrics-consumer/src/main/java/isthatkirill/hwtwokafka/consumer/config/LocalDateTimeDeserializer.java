@@ -1,6 +1,8 @@
 package isthatkirill.hwtwokafka.consumer.config;
 
-import com.google.gson.*;
+import com.google.gson.JsonDeserializationContext;
+import com.google.gson.JsonDeserializer;
+import com.google.gson.JsonElement;
 import lombok.SneakyThrows;
 import org.springframework.stereotype.Component;
 

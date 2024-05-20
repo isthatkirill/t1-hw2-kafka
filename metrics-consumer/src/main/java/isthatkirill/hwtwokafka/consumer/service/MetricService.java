@@ -1,4 +1,4 @@
-package isthatkirill.hwtwokafka.consumer.model;
+package isthatkirill.hwtwokafka.consumer.service;
 
 import isthatkirill.hwtwokafka.consumer.web.dto.MetricDto;
 

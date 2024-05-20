@@ -36,10 +36,23 @@ services:
       - app
     depends_on:
       - producer
+      - postgresql
     env_file:
       - .env
     ports:
       - '8082:8082'
+
+  postgresql:
+    image: postgres:15.1-alpine
+    container_name: postgres
+    networks:
+      - app
+    env_file:
+      - .env
+    ports:
+      - '5437:5432'
+    volumes:
+      - postgresql:/var/lib/postgresql/data
 
   zookeeper:
     image: confluentinc/cp-zookeeper:latest

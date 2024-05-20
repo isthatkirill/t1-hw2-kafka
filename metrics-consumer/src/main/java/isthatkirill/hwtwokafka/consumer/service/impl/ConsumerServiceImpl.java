@@ -1,11 +1,12 @@
-package isthatkirill.hwtwokafka.consumer.model.impl;
+package isthatkirill.hwtwokafka.consumer.service.impl;
 
 import com.google.gson.Gson;
-import isthatkirill.hwtwokafka.consumer.model.ConsumerService;
-import isthatkirill.hwtwokafka.consumer.model.MetricService;
+import isthatkirill.hwtwokafka.consumer.service.ConsumerService;
+import isthatkirill.hwtwokafka.consumer.service.MetricService;
 import isthatkirill.hwtwokafka.consumer.web.dto.MetricDto;
 import jakarta.annotation.PostConstruct;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import reactor.kafka.receiver.KafkaReceiver;
 
@@ -13,6 +14,7 @@ import reactor.kafka.receiver.KafkaReceiver;
  * @author Kirill Emelyanov
  */
 
+@Slf4j
 @Service
 @RequiredArgsConstructor
 public class ConsumerServiceImpl implements ConsumerService {
@@ -31,6 +33,7 @@ public class ConsumerServiceImpl implements ConsumerService {
         receiver.receive()
                 .subscribe(rec -> {
                     MetricDto metricDto = gson.fromJson(rec.value().toString(), MetricDto.class);
+                    log.info("Fetched via [metrics-consumer] --> {}", metricDto);
                     metricService.save(metricDto);
                     rec.receiverOffset().acknowledge();
                 });

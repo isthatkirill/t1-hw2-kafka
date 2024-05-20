@@ -1,4 +1,4 @@
-package isthatkirill.hwtwokafka.consumer.model;
+package isthatkirill.hwtwokafka.consumer.service;
 
 /**
  * @author Kirill Emelyanov

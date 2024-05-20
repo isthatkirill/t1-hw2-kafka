@@ -6,6 +6,17 @@ spring:
     import: optional:file:.env[.properties]
   kafka:
     bootstrap-servers: ${KAFKA_BOOTSTRAP_SERVERS}
+  datasource:
+    url: jdbc:postgresql://${HOST_WITH_PORT}/${POSTGRES_DB}
+    username: ${POSTGRES_USER}
+    password: ${POSTGRES_PASSWORD}
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: none
+  liquibase:
+    change-log: classpath:liquibase/db.changelog.yaml
+    enabled: true
 
 kafka:
   topics: ${KAFKA_SUBSCRIBED_TOPICS}

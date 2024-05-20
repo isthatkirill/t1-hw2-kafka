@@ -22,7 +22,7 @@ public class ProducerServiceImpl implements ProducerService {
 
     @Override
     public void send(MetricDto metric) {
-        log.info("New metric send via producer service --> {}", metric);
+        log.info("Sent via [metrics-producer] --> {}", metric);
         kafkaSender.send(
                 Mono.just(
                         SenderRecord.create(
