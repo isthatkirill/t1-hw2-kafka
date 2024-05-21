@@ -15,4 +15,6 @@ public interface MetricService {
     List<MetricDto> getAll();
 
     MetricDto getById(Long id);
+
+    List<MetricDto> getAbnormal();
 }

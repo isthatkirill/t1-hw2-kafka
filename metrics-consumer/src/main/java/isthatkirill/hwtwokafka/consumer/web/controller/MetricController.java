@@ -34,4 +34,9 @@ public class MetricController {
         return ResponseEntity.ok(metricService.getById(id));
     }
 
+    @GetMapping("/abnormal")
+    public ResponseEntity<List<MetricDto>> getAbnormal() {
+        return ResponseEntity.ok(metricService.getAbnormal());
+    }
+
 }

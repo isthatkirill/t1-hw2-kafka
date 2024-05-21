@@ -44,6 +44,13 @@ public class MetricServiceImpl implements MetricService {
         return mapper.toDto(metric);
     }
 
+    @Override
+    @Transactional(readOnly = true)
+    public List<MetricDto> getAbnormal() {
+        List<Metric> metrics = metricRepository.findAbnormalMetrics();
+        return mapper.toDto(metrics);
+    }
+
     private Metric checkIfExistsAndGet(Long id) {
         return metricRepository.findById(id)
                 .orElseThrow(() -> new MetricNotFoundException(id));
