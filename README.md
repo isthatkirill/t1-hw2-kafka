@@ -11,7 +11,7 @@
 
 ### Эндпоинты
 
-Примеры http-запросов есть в postman-коллекции.
+Примеры http-запросов есть в [postman-коллекции](https://github.com/isthatkirill/t1-hw2-kafka/blob/main/postman/requests.json).
 
 Producer service имеет один единственный эндпоинт:
 
