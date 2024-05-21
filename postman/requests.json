@@ -1,0 +1,328 @@
+{
+	"info": {
+		"_postman_id": "5f2325a6-fd83-4bfb-bfba-e24dd2ae34e4",
+		"name": "t1-hw2-kafka",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27080870"
+	},
+	"item": [
+		{
+			"name": "producer",
+			"item": [
+				{
+					"name": "add metric 1",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"method\": \"GET\",\r\n    \"path\": \"/api/v1/users\",\r\n    \"requestedAt\": \"2024-05-13 12:40:35\",\r\n    \"responseTime\": 228,\r\n    \"memoryUsedMB\": 30\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/metrics",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"metrics"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add metric 2",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"method\": \"GET\",\r\n    \"path\": \"/api/v1/users\",\r\n    \"requestedAt\": \"2024-05-13 12:40:35\",\r\n    \"responseTime\": 204,\r\n    \"memoryUsedMB\": 26\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/metrics",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"metrics"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add metric 3",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"method\": \"GET\",\r\n    \"path\": \"/api/v1/users\",\r\n    \"requestedAt\": \"2024-05-13 12:40:35\",\r\n    \"responseTime\": 302,\r\n    \"memoryUsedMB\": 36\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/metrics",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"metrics"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add metric 4",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"method\": \"GET\",\r\n    \"path\": \"/api/v1/users\",\r\n    \"requestedAt\": \"2024-05-13 12:40:35\",\r\n    \"responseTime\": 178,\r\n    \"memoryUsedMB\": 21\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/metrics",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"metrics"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add abnormal (respTime)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"method\": \"GET\",\r\n    \"path\": \"/api/v1/users\",\r\n    \"requestedAt\": \"2024-05-13 12:40:35\",\r\n    \"responseTime\": 600,\r\n    \"memoryUsedMB\": 14\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/metrics",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"metrics"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add abnormal (memUsage)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"method\": \"GET\",\r\n    \"path\": \"/api/v1/users\",\r\n    \"requestedAt\": \"2024-05-13 12:40:35\",\r\n    \"responseTime\": 128,\r\n    \"memoryUsedMB\": 160\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/metrics",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"metrics"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add metric (invalid)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"method\": \"GET\",\r\n    \"path\": \"/api/v1/users\",\r\n    \"requestedAt\": \"2025-05-13 12:40:35\",\r\n    \"responseTime\": 120,\r\n    \"memoryUsedMB\": 12\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/metrics",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"metrics"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add metric (invalid)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"method\": \"GET\",\r\n    \"path\": \"/api/v1/users\",\r\n    \"requestedAt\": \"2022-05-13 12:40:35\",\r\n    \"responseTime\": -999,\r\n    \"memoryUsedMB\": 12\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/metrics",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"metrics"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "consumer",
+			"item": [
+				{
+					"name": "get metric by id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"method\": \"GET\",\r\n    \"path\": \"/api/v1/users\",\r\n    \"requestedAt\": \"2024-05-13 12:40:35\",\r\n    \"responseTime\": 120,\r\n    \"memoryUsedMB\": 12\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8082/metrics/6",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"metrics",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all metrics",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"method\": \"GET\",\r\n    \"path\": \"/api/v1/users\",\r\n    \"requestedAt\": \"2024-05-13 12:40:35\",\r\n    \"responseTime\": 120,\r\n    \"memoryUsedMB\": 12\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8082/metrics",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"metrics"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get abnormal metrics",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"method\": \"GET\",\r\n    \"path\": \"/api/v1/users\",\r\n    \"requestedAt\": \"2024-05-13 12:40:35\",\r\n    \"responseTime\": 120,\r\n    \"memoryUsedMB\": 12\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8082/metrics/abnormal",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"metrics",
+								"abnormal"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
